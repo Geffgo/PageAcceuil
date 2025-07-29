@@ -6,17 +6,18 @@
   <title>Ma Page d'Accueil</title>
   <style>
     body {
-      background-color: #f5ebff;
+      background-color: #121212;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 20px;
-      color: #5a189a;
+      color: #e0e0e0;
     }
 
     h1 {
       text-align: center;
       font-size: 2em;
       margin-bottom: 30px;
+      color: #ff4444;
     }
 
     .search-bar {
@@ -27,11 +28,11 @@
 
     .search-bar form {
       display: flex;
-      border: 2px solid #c084fc;
+      border: 2px solid #4287f5;
       border-radius: 30px;
       overflow: hidden;
-      background-color: #fff0fb;
-      box-shadow: 0 4px 10px rgba(174, 132, 255, 0.2);
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 10px rgba(66, 135, 245, 0.3);
       width: 100%;
       max-width: 400px;
     }
@@ -43,11 +44,11 @@
       width: 100%;
       outline: none;
       background: transparent;
-      color: #4b0082;
+      color: #e0e0e0;
     }
 
     .search-bar button {
-      background-color: #c084fc;
+      background-color: #4287f5;
       border: none;
       color: white;
       padding: 10px 20px;
@@ -57,18 +58,18 @@
     }
 
     .search-bar button:hover {
-      background-color: #a45deb;
+      background-color: #3367d6;
     }
 
     .autocomplete-list {
-      background: #fff;
-      border: 1px solid #ccc;
+      background: #1e1e1e;
+      border: 1px solid #444;
       border-top: none;
       max-width: 400px;
       margin: 0 auto;
       margin-top: -10px;
       border-radius: 0 0 10px 10px;
-      box-shadow: 0 4px 10px rgba(174, 132, 255, 0.15);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       z-index: 999;
       position: relative;
     }
@@ -76,10 +77,11 @@
     .autocomplete-item {
       padding: 10px;
       cursor: pointer;
+      color: #e0e0e0;
     }
 
     .autocomplete-item:hover {
-      background-color: #f0dfff;
+      background-color: #333;
     }
 
     .category {
@@ -89,10 +91,11 @@
 
     .category h2 {
       font-size: 1.4em;
-      border-bottom: 3px solid #c084fc;
+      border-bottom: 3px solid #4287f5;
       padding-bottom: 4px;
       margin-bottom: 20px;
       display: inline-block;
+      color: #ff4444;
     }
 
     .links {
@@ -103,20 +106,21 @@
     }
 
     .link-card {
-      background-color: #fff0fb;
+      background-color: #1e1e1e;
       border-radius: 12px;
       width: 120px;
       text-align: center;
       padding: 10px;
-      box-shadow: 0 4px 10px rgba(174, 132, 255, 0.15);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       text-decoration: none;
-      color: #4b0082;
+      color: #e0e0e0;
       font-size: 0.9em;
       transition: transform 0.2s ease, background-color 0.3s ease;
+      border: 1px solid #4287f5;
     }
 
     .link-card:hover {
-      background-color: #ecd8ff;
+      background-color: #2a2a2a;
       transform: translateY(-5px);
     }
 
@@ -157,27 +161,15 @@
   </div>
   <div class="autocomplete-list" id="autocomplete-list"></div>
 
-  <!-- ACCÈS RAPIDE -->
+  <!-- Productivité -->
   <div class="category">
-    <h2>ACCÈS RAPIDE</h2>
+    <h2>Productivité</h2>
     <div class="links">
       <a class="link-card" href="https://m365.cloud.microsoft/search/?auth=2&from=NoAccountOnStart">
         <img src="logo/microsoft_365.png" alt="Microsoft 365"> Microsoft 365
       </a>
       <a class="link-card" href="https://gclasse.fr/Index_Accueil">
         <img src="logo/gclasse.png" alt="GClasse"> GClasse
-      </a>
-      <a class="link-card" href="https://www.cisco.com/...">
-        <img src="logo/cisco.png" alt="Cisco"> Cisco
-      </a>
-      <a class="link-card" href="https://www.netacad.com/fr/">
-        <img src="logo/cisco_netacad.png" alt="Cisco Netacad"> Cisco Netacad
-      </a>
-      <a class="link-card" href="https://chat.mistral.ai/chat">
-        <img src="logo/le_chat.png" alt="Le Chat"> Le CHAT
-      </a>
-      <a class="link-card" href="https://chatgpt.com/">
-        <img src="logo/chat_gpt.png" alt="ChatGPT"> ChatGPT
       </a>
       <a class="link-card" href="https://trello.com/fr">
         <img src="logo/trello.png" alt="Trello"> Trello
@@ -197,17 +189,46 @@
       <a class="link-card" href="https://vercel.com/">
         <img src="logo/vercel.png" alt="Vercel"> Vercel
       </a>
+      <a class="link-card" href="https://fr.overleaf.com/">
+        <img src="logo/overleaf.png" alt="Overleaf"> Overleaf
+      </a>
+    </div>
+  </div>
+
+  <!-- Éducation -->
+  <div class="category">
+    <h2>Éducation</h2>
+    <div class="links">
+      <a class="link-card" href="https://www.cisco.com/">
+        <img src="logo/cisco.png" alt="Cisco"> Cisco
+      </a>
+      <a class="link-card" href="https://www.netacad.com/fr/">
+        <img src="logo/cisco_netacad.png" alt="Cisco Netacad"> Cisco Netacad
+      </a>
       <a class="link-card" href="https://obsigeffgo.vercel.app/">
         <img src="logo/digital_garden.png" alt="Digital Garden"> Digital Garden CCNA
       </a>
       <a class="link-card" href="https://mooc-digital-garden.vercel.app/">
         <img src="logo/digital_garden.png" alt="Digital Garden"> Digital Garden MOOC
       </a>
-      <a class="link-card" href="https://www.google.com">
-        <img src="logo/google.png" alt="Google"> Google
+      <a class="link-card" href="https://learn.microsoft.com/fr-fr/training/">
+        <img src="logo/microsoft.png" alt="Microsoft Learn"> Microsoft Learn
       </a>
-      <a class="link-card" href="https://www.youtube.com">
-        <img src="logo/youtube.png" alt="YouTube"> YouTube
+      <a class="link-card" href="https://www.gartner.com/en/research/magic-quadrant">
+        <img src="logo/gartner.png" alt="Gartner"> Gartner
+      </a>
+    </div>
+  </div>
+
+  <!-- Communication -->
+  <div class="category">
+    <h2>Communication</h2>
+    <div class="links">
+      <a class="link-card" href="https://chat.mistral.ai/chat">
+        <img src="logo/le_chat.png" alt="Le Chat"> Le CHAT
+      </a>
+      <a class="link-card" href="https://chatgpt.com/">
+        <img src="logo/chat_gpt.png" alt="ChatGPT"> ChatGPT
       </a>
       <a class="link-card" href="https://mail.google.com">
         <img src="logo/gmail.png" alt="Gmail"> Gmail
@@ -215,27 +236,37 @@
       <a class="link-card" href="https://proton.me/fr/mail">
         <img src="logo/proton.png" alt="Proton"> Proton
       </a>
-      <a class="link-card" href="https://www.gartner.com/en/research/magic-quadrant">
-        <img src="logo/gartner.png" alt="Gartner"> Gartner
+    </div>
+  </div>
+
+  <!-- Loisirs -->
+  <div class="category">
+    <h2>Loisirs</h2>
+    <div class="links">
+      <a class="link-card" href="https://www.google.com">
+        <img src="logo/google.png" alt="Google"> Google
       </a>
-      <a class="link-card" href="https://learn.microsoft.com/fr-fr/training/">
-        <img src="logo/microsoft.png" alt="Microsoft Learn"> Microsoft Learn
+      <a class="link-card" href="https://www.youtube.com">
+        <img src="logo/youtube.png" alt="YouTube"> YouTube
       </a>
-      <a class="link-card" href="https://fr.overleaf.com/">
-        <img src="logo/overleaf.png" alt="Overleaf"> Overleaf
+      <a class="link-card" href="https://www.amazon.fr/">
+        <img src="logo/amazon.png" alt="Amazon"> Amazon
+      </a>
+      <a class="link-card" href="https://music.amazon.fr/">
+        <img src="logo/amazon-music.png" alt="Amazon Music"> Amazon Music
       </a>
       <a class="link-card" href="https://anime-sama.fr/">
         <img src="logo/animsama.png" alt="Anime-sama"> Anime-sama
       </a>
-      <a class="link-card" href="http://localhost">
-        <img src="logo/localhost.png" alt="localhost"> Localhost
+      <a class="link-card" href="https://netflix.com/">
+        <img src="logo/netflix.png" alt="Netflix"> Netflix
       </a>
     </div>
   </div>
 
-  <!-- JDR -->
+  <!-- Jeux de Rôle -->
   <div class="category">
-    <h2>JDR</h2>
+    <h2>Jeux de Rôle</h2>
     <div class="links">
       <a class="link-card" href="https://www.dungeonscrawl.com/">
         <img src="logo/dungeon_scrawl.png" alt="Dungeon Scrawl"> Dungeon Scrawl
@@ -249,11 +280,27 @@
       <a class="link-card" href="https://inkarnate.com/">
         <img src="logo/Inkarnate.png" alt="Inkarnate"> Inkarnate
       </a>
+      <a class="link-card" href="https://koboldplus.com/">
+        <img src="logo/koboldplus.png" alt="KoboldPlus"> KoboldPlus
+      </a>
+    </div>
+  </div>
+
+  <!-- Utilitaires -->
+  <div class="category">
+    <h2>Utilitaires</h2>
+    <div class="links">
+      <a class="link-card" href="http://localhost">
+        <img src="logo/localhost.png" alt="localhost"> Localhost
+      </a>
+      <a class="link-card" href="https://www.edf.fr/">
+        <img src="logo/edf.png" alt="EDF"> EDF
+      </a>
     </div>
   </div>
 
   <script>
-    const suggestions = ["ChatGPT", "Cisco CCNA", "Google Drive", "GitHub", "Digital Garden", "Trello", "Anime-sama"];
+    const suggestions = ["ChatGPT", "Cisco CCNA", "Google Drive", "GitHub", "Digital Garden", "Trello", "Anime-sama", "EDF", "Amazon", "Amazon Music", "KoboldPlus"];
     const input = document.getElementById("searchInput");
     const list = document.getElementById("autocomplete-list");
 
