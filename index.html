@@ -193,6 +193,18 @@
       border-radius: 1px;
     }
 
+    .category h3 {
+      font-size: 1.2rem; /* plus petit */
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      font-weight: 600; /* optionnel, tu peux enlever si tu veux plus fin */
+    }
+
+    /* suppression de la ligne */
+    .category h3::after {
+      content: none;
+    }
+
     .links {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -688,6 +700,33 @@
     .btn-secondary:hover {
       background: var(--hover-color);
     }
+
+    .login-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+    }
+
+    .login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .login-btn span {
+    font-size: 24px;
+    }
   </style>
 </head>
 <body>
@@ -758,26 +797,58 @@
     <!-- Toggle thème -->
     <div class="theme-toggle" id="theme-toggle">🌙</div>
 
-    <!-- Productivité -->
+    <!-- Bouton de connexion -->
+    <a href="connexion.html" class="login-btn" title="Se connecter">
+      <span>👤</span>
+    </a>
+
+
+        <!-- School -->
     <div class="category" id="productivity">
-      <h2>Productivité</h2>
+      <h2>School Tool</h2>
+      <h3>AI</h3>
+        <div class="links">
+        <a class="link-card" href="https://claude.ai/new">
+          <img src="logo/claude.png" alt="Claude" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23f93a13%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>Chat</text></svg>'">
+          <span>Claude </span>
+        </a>
+        <a class="link-card" href="https://chatgpt.com/">
+          <img src="logo/chat_gpt.png" alt="ChatGPT" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%2310a37f%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>GPT</text></svg>'">
+          <span>ChatGPT</span>
+        </a>
+        <a class="link-card" href="https://chat.mistral.ai/chat">
+          <img src="logo/le_chat.png" alt="Le Chat" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23f93a13%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>Chat</text></svg>'">
+          <span>Le CHAT</span>
+        </a>
+        <a class="link-card" href="https://gemini.google.com/app?hl=fr">
+          <img src="logo/gemini.png" alt="Gémini" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23f93a13%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>Chat</text></svg>'">
+          <span>Gémini</span>
+        </a>
+
+
+        </div>
+
+      <h3>Project</h3>
       <div class="links">
-        <a class="link-card" href="https://m365.cloud.microsoft/search/?auth=2&from=NoAccountOnStart">
-          <img src="logo/microsoft_365.png" alt="Microsoft 365" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23ff4444%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>M</text></svg>'">
-          <span>Microsoft 365</span>
+        <a class="link-card" href="https://trello.com/fr">
+          <img src="logo/trello.png" alt="Trello" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%230079bf%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>T</text></svg>'">
+          <span>Trello</span>
+        </a>        
+        <a class="link-card" href="https://github.com/">
+          <img src="logo/github.png" alt="GitHub" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23333%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>Git</text></svg>'">
+          <span>GitHub</span>
         </a>
         <a class="link-card" href="https://gclasse.fr/Index_Accueil">
           <img src="logo/gclasse.png" alt="GClasse" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%234285f4%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>G</text></svg>'">
           <span>GClasse</span>
         </a>
-        <a class="link-card" href="https://trello.com/fr">
-          <img src="logo/trello.png" alt="Trello" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%230079bf%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>T</text></svg>'">
-          <span>Trello</span>
+        <a class="link-card" href="https://obsigeffgo.vercel.app/">
+          <img src="logo/digital_garden.png" alt="Digital Garden" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%2347a141%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>DG</text></svg>'">
+          <span>Digital Garden CCNA</span>
         </a>
-        <a class="link-card" href="https://github.com/">
-          <img src="logo/github.png" alt="GitHub" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23333%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>Git</text></svg>'">
-          <span>GitHub</span>
-        </a>
+        <a class="link-card" href="https://mooc-digital-garden.vercel.app/">
+          <img src="logo/digital_garden.png" alt="Digital Garden" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%2347a141%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>DG</text></svg>'">
+          <span>Digital Garden MOOC</span>
         <a class="link-card" href="https://app.diagrams.net/">
           <img src="logo/drawio.png" alt="draw.io" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23f08705%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>Draw</text></svg>'">
           <span>draw.io</span>
@@ -786,10 +857,7 @@
           <img src="https://img.icons8.com/color/48/canva.png" alt="Canva" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%2300c4cc%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>C</text></svg>'">
           <span>Canva</span>
         </a>
-        <a class="link-card" href="https://teams.microsoft.com/">
-          <img src="https://img.icons8.com/color/48/microsoft-teams.png" alt="Teams" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%236264a7%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>T</text></svg>'">
-          <span>Teams</span>
-        </a>
+
         <a class="link-card" href="https://vercel.com/">
           <img src="logo/vercel.png" alt="Vercel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23000%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>V</text></svg>'">
           <span>Vercel</span>
@@ -798,12 +866,13 @@
           <img src="logo/overleaf.png" alt="Overleaf" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%2347a141%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>OL</text></svg>'">
           <span>Overleaf</span>
         </a>
+        <a class="link-card" href="http://localhost">
+          <img src="logo/localhost.png" alt="localhost" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%236b7280%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>127</text></svg>'">
+          <span>Localhost</span>
+        </a>
       </div>
-    </div>
 
-    <!-- Éducation -->
-    <div class="category" id="education">
-      <h2>Éducation</h2>
+      <h3>Technology watch</h3>
       <div class="links">
         <a class="link-card" href="https://www.cisco.com/">
           <img src="logo/cisco.png" alt="Cisco" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%231ba0d7%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>C</text></svg>'">
@@ -813,36 +882,22 @@
           <img src="logo/cisco_netacad.png" alt="Cisco Netacad" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%231ba0d7%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>Net</text></svg>'">
           <span>Cisco Netacad</span>
         </a>
-        <a class="link-card" href="https://obsigeffgo.vercel.app/">
-          <img src="logo/digital_garden.png" alt="Digital Garden" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%2347a141%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>DG</text></svg>'">
-          <span>Digital Garden CCNA</span>
-        </a>
-        <a class="link-card" href="https://mooc-digital-garden.vercel.app/">
-          <img src="logo/digital_garden.png" alt="Digital Garden" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%2347a141%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>DG</text></svg>'">
-          <span>Digital Garden MOOC</span>
-        </a>
         <a class="link-card" href="https://learn.microsoft.com/fr-fr/training/">
           <img src="logo/microsoft.png" alt="Microsoft Learn" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%2300bcf2%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>ML</text></svg>'">
           <span>Microsoft Learn</span>
         </a>
-        <a class="link-card" href="https://www.gartner.com/en/research/magic-quadrant">
-          <img src="logo/gartner.png" alt="Gartner" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23003d82%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>G</text></svg>'">
-          <span>Gartner</span>
-        </a>
-      </div>
-    </div>
 
-    <!-- Communication -->
-    <div class="category" id="communication">
-      <h2>Communication</h2>
+      </div>
+
+      <h3>Communication</h3>
       <div class="links">
-        <a class="link-card" href="https://chat.mistral.ai/chat">
-          <img src="logo/le_chat.png" alt="Le Chat" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23f93a13%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>Chat</text></svg>'">
-          <span>Le CHAT</span>
+        <a class="link-card" href="https://m365.cloud.microsoft/search/?auth=2&from=NoAccountOnStart">
+          <img src="logo/microsoft_365.png" alt="Microsoft 365" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23ff4444%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>M</text></svg>'">
+          <span>Microsoft 365</span>
         </a>
-        <a class="link-card" href="https://chatgpt.com/">
-          <img src="logo/chat_gpt.png" alt="ChatGPT" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%2310a37f%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>GPT</text></svg>'">
-          <span>ChatGPT</span>
+        <a class="link-card" href="https://teams.microsoft.com/">
+          <img src="https://img.icons8.com/color/48/microsoft-teams.png" alt="Teams" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%236264a7%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>T</text></svg>'">
+          <span>Teams</span>
         </a>
         <a class="link-card" href="https://mail.google.com">
           <img src="logo/gmail.png" alt="Gmail" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23ea4335%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>@</text></svg>'">
@@ -852,12 +907,19 @@
           <img src="logo/proton.png" alt="Proton" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%236d4aff%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>P</text></svg>'">
           <span>Proton</span>
         </a>
+        <a class="link-card" href="https://www.linkedin.com/feed/">
+          <img src="logo/linkedin.png" alt="Linkedin" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%236d4aff%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>P</text></svg>'">
+          <span>Linkedin</span>
+        </a>
       </div>
     </div>
 
-    <!-- Loisirs -->
-    <div class="category" id="leisure">
-      <h2>Loisirs</h2>
+   
+
+    <!-- Hobbies -->
+    <div class="category" id="communication">
+      <h2>Hobbies</h2>
+      <h3>Useful</h3>
       <div class="links">
         <a class="link-card" href="https://www.google.com">
           <img src="logo/google.png" alt="Google" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%234285f4%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>G</text></svg>'">
@@ -883,12 +945,13 @@
           <img src="logo/netflix.png" alt="Netflix" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23e50914%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2212%22>N</text></svg>'">
           <span>Netflix</span>
         </a>
+        <a class="link-card" href="https://www.edf.fr/">
+          <img src="logo/edf.png" alt="EDF" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23ff7f00%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>⚡</text></svg>'">
+          <span>EDF</span>
+        </a>
       </div>
-    </div>
 
-    <!-- Jeux de Rôle -->
-    <div class="category" id="rpg">
-      <h2>Jeux de Rôle</h2>
+      <h3>Role-Playing Games</h3>
       <div class="links">
         <a class="link-card" href="https://www.dungeonscrawl.com/">
           <img src="logo/dungeon_scrawl.png" alt="Dungeon Scrawl" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%238b5a3c%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>🏰</text></svg>'">
@@ -910,21 +973,7 @@
           <img src="logo/koboldplus.png" alt="KoboldPlus" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%237c3aed%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>K+</text></svg>'">
           <span>KoboldPlus</span>
         </a>
-      </div>
-    </div>
 
-    <!-- Utilitaires -->
-    <div class="category" id="utilities">
-      <h2>Utilitaires</h2>
-      <div class="links">
-        <a class="link-card" href="http://localhost">
-          <img src="logo/localhost.png" alt="localhost" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%236b7280%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%228%22>127</text></svg>'">
-          <span>Localhost</span>
-        </a>
-        <a class="link-card" href="https://www.edf.fr/">
-          <img src="logo/edf.png" alt="EDF" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22><rect fill=%22%23ff7f00%22 width=%2224%22 height=%2224%22 rx=%224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2210%22>⚡</text></svg>'">
-          <span>EDF</span>
-        </a>
       </div>
     </div>
   </div>
