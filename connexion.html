@@ -250,8 +250,9 @@ loginForm.addEventListener('submit', function(e) {
 
     // Redirige vers l'URL de redirection
     setTimeout(() => {
-      window.location.href = redirectUrl;
+      window.location.href = 'http://192.168.1.99/auth_bridge.html?token=success';
     }, 500);
+    
   } else {
     // Connexion échouée
     errorMessage.classList.add('show');
